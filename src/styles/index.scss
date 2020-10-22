@@ -1,5 +1,18 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+.Counter{
+    display: inline-block;
+    background: black;
+
+}
+.Counter div{
+    display: inline-block;
+    font-size: 80px;
+    line-height: 80px;
+    background: #101010;
+    color: white;
+    padding: 10px;
+}
 /* 
 
     You can write your own styles here...

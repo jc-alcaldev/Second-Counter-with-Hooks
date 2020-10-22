@@ -1,13 +1,16 @@
 import React from "react";
+import { SecondsCounter } from "./secondsCounter.js";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export function Home() {
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
+	return <SecondsCounter />;
+}
+
+{
+	/* <h1>Hello Rigo!</h1>
 			<p>
 				<img src={rigoImage} />
 			</p>
@@ -18,7 +21,5 @@ export function Home() {
 				Made by{" "}
 				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
 				love!
-			</p>
-		</div>
-	);
+			</p> */
 }
