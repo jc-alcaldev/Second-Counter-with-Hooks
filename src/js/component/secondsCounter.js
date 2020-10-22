@@ -9,30 +9,35 @@ export const SecondsCounter = () => {
 	const [count2, setCount2] = useState("00");
 	const [count1, setCount1] = useState("00");
 
-	let counter = 0;
-	const startTimer = () => {
-		setInterval(() => {
-			const four = Math.floor(counter / 1000);
+    let interval = useRef();
+    let counter = 0;
+    const startTimer =() => {
+		
+        let counter = 0;
+        interval = setInterval(() => {
+            const four = Math.floor(counter / 1000);
 			const three = Math.floor(counter / 100);
 			const two = Math.floor(counter / 10);
 			const one = Math.floor(counter / 1);
 			//console.log(four, three, two, one);
 
-			counter++;
-
-			setCount4(four);
-			setCount3(three);
-			setCount2(two);
-			setCount1(one);
-		}, 1000);
-	};
-
+		counter++;
+        });
+        if (counter < 0) {
+				clearInterval(interval.current);
+		}else {
+                setCount4(four);
+				setCount3(three);
+				setCount2(two);
+                setCount1(one);
+        }
+    };
 	useEffect(() => {
-		startTimer();
-		return () => {
-			clearInterval(interval.current);
-		};
-	});
+            startTimer();
+            return () => {
+                clearInterval(interval.current);
+            };
+	    });
 
 	return (
 		<div className="Counter">
@@ -47,9 +52,3 @@ export const SecondsCounter = () => {
 		</div>
 	);
 };
-/* SecondsCounter.propTypes = {
-	digitFour: PropTypes.numbers,
-	digitThree: PropTypes.bool,
-	digitTwo: PropTypes.bool,
-	digitOne: PropTypes.bool
-}; */
