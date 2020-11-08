@@ -51,6 +51,8 @@ export const SecondsCounter = () => {
 		}, 1000);
 	}, []);
 
+	/* count1 > 9 ? setCount1(0) : count1; */
+
 	return (
 		<div className="Counter">
 			<div className="calendar">
