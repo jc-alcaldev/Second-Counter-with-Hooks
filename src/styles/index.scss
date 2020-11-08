@@ -1,17 +1,20 @@
 @import "~bootstrap/scss/bootstrap.scss";
+#app{
+    height: -webkit-fill-available;
+background-image: url("https://i.pinimg.com/564x/90/ca/d4/90cad40e061ae1e08a9277e50d63f46e.jpg");
+    display: flex;
+    justify-content: center;
+}
 
 .Counter{
     display: inline-block;
-    background: black;
-
 }
 .Counter div{
     display: inline-block;
     font-size: 80px;
     line-height: 80px;
-    background: #101010;
     color: white;
-    padding: 10px;
+    padding: 15px;
 }
 /* 
 
