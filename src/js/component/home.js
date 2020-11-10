@@ -6,7 +6,22 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export function Home() {
-	return <SecondsCounter />;
+	//const miliSeg = [1000, 10000, 100000];
+	return (
+		<div className="Counter">
+			<div className="calendar">
+				{/* <i class="far fa-clock" /> */}
+				Chronograph
+			</div>
+			<SecondsCounter miliSeg={100000} />;
+			<SecondsCounter miliSeg={10000} />;<SecondsCounter miliSeg={1000} />
+			;
+			{/* {miliSeg.map(item => {
+				console.log(item);
+				<SecondsCounter item />;
+			})} */}
+		</div>
+	);
 }
 
 {
