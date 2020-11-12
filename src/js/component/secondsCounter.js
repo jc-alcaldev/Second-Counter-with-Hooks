@@ -1,20 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 export const SecondsCounter = props => {
-	const [count1, setCount1] = useState(0);
-	let count = 0;
+	const [count, setCount] = useState(0);
 
 	useEffect(() => {
 		setInterval(() => {
-			setCount1(count);
-			count++;
+			setCount(count => count + 1);
 		}, props.miliSeg);
 	}, []);
+	if (count > 9) setCount(0);
 
-	/* count1 > 9 ? setCount1(0) : count1; */
+	console.log("aaaaaaa");
 
-	return <div className="one">{count1}</div>;
+	return <div className="one">{count}</div>;
 };
 
 SecondsCounter.propTypes = {

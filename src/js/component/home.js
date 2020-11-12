@@ -6,35 +6,17 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export function Home() {
-	//const miliSeg = [1000, 10000, 100000];
+	var one_seg = 1000;
 	return (
 		<div className="Counter">
 			<div className="calendar">
-				{/* <i class="far fa-clock" /> */}
-				Chronograph
+				<i className="far fa-clock" />
 			</div>
-			<SecondsCounter miliSeg={100000} />;
-			<SecondsCounter miliSeg={10000} />;<SecondsCounter miliSeg={1000} />
-			;
-			{/* {miliSeg.map(item => {
-				console.log(item);
-				<SecondsCounter item />;
-			})} */}
+			<SecondsCounter miliSeg={one_seg * 10000} />
+			<SecondsCounter miliSeg={one_seg * 1000} />
+			<SecondsCounter miliSeg={one_seg * 100} />
+			<SecondsCounter miliSeg={one_seg * 10} />
+			<SecondsCounter miliSeg={one_seg} />
 		</div>
 	);
-}
-
-{
-	/* <h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p> */
 }
